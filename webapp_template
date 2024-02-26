@@ -1,0 +1,20 @@
+CREATE TABLE `webapp_template` (
+  `id` int(6) DEFAULT NULL,
+  `engagement_id` varchar(60) DEFAULT NULL,
+  `test_case_id` varchar(90) DEFAULT NULL,
+  `test_case` text DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `status` char(42) DEFAULT NULL,
+  `outcome` char(42) DEFAULT NULL,
+  `last_updated` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `notes` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `webapp_template` */
+
+insert  into `webapp_template`(`id`,`engagement_id`,`test_case_id`,`test_case`,`description`,`status`,`outcome`,`last_updated`,`notes`) values 
+(1,'','INFO1','To gather info','gather info','Not Started','Select Outcome','2024-02-25 13:14:42',NULL),
+(NULL,NULL,'test3',NULL,NULL,NULL,NULL,'2024-02-25 13:57:36',NULL),
+(NULL,NULL,'test5',NULL,NULL,NULL,NULL,'2024-02-25 13:57:42',NULL),
+(NULL,NULL,'test6',NULL,NULL,NULL,NULL,'2024-02-25 13:57:44',NULL),
+(NULL,NULL,'test7',NULL,NULL,NULL,NULL,'2024-02-25 13:57:49',NULL);
